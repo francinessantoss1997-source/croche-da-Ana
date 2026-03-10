@@ -15,40 +15,24 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:"Segoe UI",sans-serif;
+font-family:Segoe UI, sans-serif;
 }
 
-/* FUNDO COM FIOS */
+/* FUNDO COM TEXTURA DE FIOS */
 
 body{
 
-background:#fff7fb;
-overflow-x:hidden;
+background-color:#fff4fa;
 
-}
+background-image:
 
-/* FIOS ANIMADOS */
+radial-gradient(#ffd6ec 2px, transparent 2px),
+radial-gradient(#ffc2df 2px, transparent 2px);
 
-.fio{
+background-size:40px 40px;
+background-position:0 0,20px 20px;
 
-position:fixed;
-width:400px;
-height:400px;
-border-radius:50%;
-filter:blur(100px);
-opacity:0.4;
-animation:mover 15s infinite alternate;
-
-}
-
-.fio1{background:#ff9ac6; top:10%; left:5%;}
-.fio2{background:#ffd6ec; top:60%; left:70%;}
-.fio3{background:#ffc8dd; top:30%; left:50%;}
-
-@keyframes mover{
-
-from{transform:translate(0,0)}
-to{transform:translate(120px,60px)}
+color:#444;
 
 }
 
@@ -64,29 +48,24 @@ color:white;
 }
 
 .hero h1{
-
-font-size:45px;
-
+font-size:46px;
 }
 
 .hero p{
-
 opacity:0.9;
 margin-top:10px;
-
 }
 
-/* NAV */
+/* MENU */
 
 nav{
 
 background:white;
 text-align:center;
 padding:15px;
-box-shadow:0 5px 12px rgba(0,0,0,0.1);
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
-z-index:2;
 
 }
 
@@ -94,8 +73,8 @@ nav a{
 
 margin:0 20px;
 text-decoration:none;
-font-weight:bold;
 color:#ff4fa3;
+font-weight:bold;
 
 }
 
@@ -131,7 +110,7 @@ gap:30px;
 background:white;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+box-shadow:0 12px 25px rgba(0,0,0,0.1);
 transition:0.4s;
 
 }
@@ -177,12 +156,11 @@ text-decoration:none;
 
 }
 
-/* CARROSSEL */
+/* CARROSSEL DE FIOS */
 
 .carrossel{
 
 overflow:hidden;
-position:relative;
 
 }
 
@@ -190,7 +168,7 @@ position:relative;
 
 display:flex;
 gap:30px;
-animation:scroll 20s linear infinite;
+animation:scroll 25s linear infinite;
 
 }
 
@@ -206,12 +184,12 @@ box-shadow:0 10px 20px rgba(0,0,0,0.2);
 
 @keyframes scroll{
 
-from{transform:translateX(0)}
-to{transform:translateX(-50%)}
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
 
 }
 
-/* PINTEREST */
+/* GALERIA PINTEREST */
 
 .pinterest{
 
@@ -225,7 +203,7 @@ column-gap:20px;
 width:100%;
 margin-bottom:20px;
 border-radius:15px;
-box-shadow:0 8px 18px rgba(0,0,0,0.2);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 
 }
 
@@ -260,26 +238,6 @@ font-weight:bold;
 
 }
 
-/* LINHA COSTURANDO */
-
-.linha{
-
-position:fixed;
-top:0;
-left:50%;
-width:4px;
-height:0;
-background:#ff4fa3;
-animation:costura 5s forwards;
-
-}
-
-@keyframes costura{
-
-to{height:100%}
-
-}
-
 /* FOOTER */
 
 footer{
@@ -298,16 +256,10 @@ color:white;
 
 <body>
 
-<div class="fio fio1"></div>
-<div class="fio fio2"></div>
-<div class="fio fio3"></div>
-
-<div class="linha"></div>
-
 <div class="hero">
 
 <h1>🧶 Ateliê de Crochê da Ana</h1>
-<p>Peças artesanais feitas com carinho</p>
+<p>Peças artesanais feitas com amor e criatividade</p>
 
 </div>
 
@@ -323,7 +275,7 @@ color:white;
 
 <section id="produtos">
 
-<h2>🌸 Produtos</h2>
+<h2>🌸 Peças em Crochê</h2>
 
 <div class="grid" id="produtosGrid"></div>
 
@@ -331,19 +283,19 @@ color:white;
 
 <section id="fios">
 
-<h2>🧵 Fios</h2>
+<h2>🧵 Fios e Materiais</h2>
 
 <div class="carrossel">
 
 <div class="faixa">
 
-<img src="https://images.unsplash.com/photo-1589987607627-52c82b6fdd47">
 <img src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d">
+<img src="https://images.unsplash.com/photo-1589987607627-52c82b6fdd47">
 <img src="https://images.unsplash.com/photo-1616627981459-0e4c9c6c6f63">
 <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa">
 
-<img src="https://images.unsplash.com/photo-1589987607627-52c82b6fdd47">
 <img src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d">
+<img src="https://images.unsplash.com/photo-1589987607627-52c82b6fdd47">
 
 </div>
 
@@ -353,7 +305,7 @@ color:white;
 
 <section id="galeria">
 
-<h2>🌸 Galeria de Inspiração</h2>
+<h2>🌸 Inspirações</h2>
 
 <div class="pinterest">
 
@@ -369,7 +321,7 @@ color:white;
 
 <section id="receitas">
 
-<h2>📖 Receitas</h2>
+<h2>📖 Receitas de Crochê</h2>
 
 <div class="receita">
 
@@ -391,8 +343,8 @@ color:white;
 
 <p>
 
-1️⃣ Anel mágico<br>
-2️⃣ 12 pontos altos<br>
+1️⃣ Comece com anel mágico<br>
+2️⃣ Faça 12 pontos altos<br>
 3️⃣ Continue aumentando
 
 </p>
@@ -410,7 +362,7 @@ color:white;
 <br>
 
 <a class="whatsapp"
-href="https://wa.me/5511999999999?text=Olá! Quero uma peça de crochê">
+href="https://wa.me/5511999999999">
 
 Falar no WhatsApp
 
@@ -428,7 +380,7 @@ Enviar Email
 
 <footer>
 
-🧶 Ateliê de Crochê da Ana • Feito com amor
+🧶 Ateliê de Crochê da Ana • Feito com carinho
 
 </footer>
 
@@ -455,7 +407,7 @@ imagem:"https://images.unsplash.com/photo-1610701596007-11502861dcfa"
 },
 
 {
-nome:"Tapete",
+nome:"Tapete de Crochê",
 preco:"R$120",
 imagem:"https://images.unsplash.com/photo-1589987607627-52c82b6fdd47"
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 
 <meta charset="UTF-8">
@@ -17,9 +16,14 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Segoe UI, Arial;
+
+/* cursor agulha */
+
+cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='24' font-size='24'%3E🪡%3C/text%3E%3C/svg%3E"),auto;
+
 }
 
-/* FUNDO COM FIOS */
+/* FUNDO COM NOVELOS */
 
 body{
 
@@ -27,21 +31,9 @@ background:#fff5fb;
 
 background-image:
 
-repeating-linear-gradient(
-45deg,
-#ffd6ec,
-#ffd6ec 2px,
-transparent 2px,
-transparent 25px
-),
+url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ctext y='90' font-size='90'%3E🧶%3C/text%3E%3C/svg%3E");
 
-repeating-linear-gradient(
--45deg,
-#ffc2df,
-#ffc2df 2px,
-transparent 2px,
-transparent 25px
-);
+background-size:120px;
 
 color:#444;
 
@@ -52,7 +44,7 @@ color:#444;
 .hero{
 
 text-align:center;
-padding:90px 20px;
+padding:100px 20px;
 background:linear-gradient(135deg,#ff9ac6,#ffc8dd);
 color:white;
 
@@ -60,7 +52,7 @@ color:white;
 
 .hero h1{
 
-font-size:45px;
+font-size:48px;
 
 }
 
@@ -78,7 +70,7 @@ nav{
 background:white;
 padding:15px;
 text-align:center;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+box-shadow:0 5px 12px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
 
@@ -110,6 +102,16 @@ margin-bottom:40px;
 
 }
 
+/* DECORAÇÃO */
+
+.decoracao{
+
+text-align:center;
+font-size:40px;
+margin-bottom:20px;
+
+}
+
 /* PRODUTOS */
 
 .grid{
@@ -125,7 +127,7 @@ gap:30px;
 background:white;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 transition:0.4s;
 
 }
@@ -141,6 +143,15 @@ transform:translateY(-10px);
 width:100%;
 height:220px;
 object-fit:cover;
+transition:0.4s;
+
+}
+
+/* ZOOM */
+
+.card:hover img{
+
+transform:scale(1.1);
 
 }
 
@@ -157,8 +168,6 @@ font-weight:bold;
 
 }
 
-/* BOTÃO */
-
 .btn{
 
 display:inline-block;
@@ -171,66 +180,28 @@ text-decoration:none;
 
 }
 
-/* CARROSSEL DE FIOS */
-
-.carrossel{
-
-overflow:hidden;
-
-}
-
-.faixa{
-
-display:flex;
-gap:30px;
-animation:scroll 25s linear infinite;
-
-}
-
-.faixa img{
-
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
-
-}
-
-@keyframes scroll{
-
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
-
-}
-
 /* GALERIA PINTEREST */
 
-.pinterest{
+.galeria{
 
 columns:3 250px;
 column-gap:20px;
 
 }
 
-.pinterest img{
+.galeria img{
 
 width:100%;
 margin-bottom:20px;
 border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+transition:0.4s;
 
 }
 
-/* RECEITAS */
+.galeria img:hover{
 
-.receita{
-
-background:white;
-padding:20px;
-border-radius:15px;
-margin-bottom:20px;
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
+transform:scale(1.05);
 
 }
 
@@ -281,9 +252,7 @@ color:white;
 <nav>
 
 <a href="#produtos">Peças</a>
-<a href="#fios">Fios</a>
 <a href="#galeria">Galeria</a>
-<a href="#receitas">Receitas</a>
 <a href="#contato">Contato</a>
 
 </nav>
@@ -292,76 +261,24 @@ color:white;
 
 <h2>🌸 Produtos</h2>
 
+<div class="decoracao">🪡 🧵 🪡</div>
+
 <div class="grid" id="produtosGrid"></div>
-
-</section>
-
-<section id="fios">
-
-<h2>🧵 Fios e Materiais</h2>
-
-<div class="carrossel">
-
-<div class="faixa">
-
-<img src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d">
-<img src="https://images.unsplash.com/photo-1589987607627-52c82b6fdd47">
-<img src="https://images.unsplash.com/photo-1616627981459-0e4c9c6c6f63">
-<img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa">
-
-<img src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d">
-<img src="https://images.unsplash.com/photo-1589987607627-52c82b6fdd47">
-
-</div>
-
-</div>
 
 </section>
 
 <section id="galeria">
 
-<h2>🌸 Inspirações</h2>
+<h2>✨ Galeria</h2>
 
-<div class="pinterest">
+<div class="decoracao">🧶 🪡 🧶</div>
+
+<div class="galeria">
 
 <img src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d">
-<img src="https://images.unsplash.com/photo-1616627981459-0e4c9c6c6f63">
 <img src="https://images.unsplash.com/photo-1589987607627-52c82b6fdd47">
+<img src="https://images.unsplash.com/photo-1616627981459-0e4c9c6c6f63">
 <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa">
-
-</div>
-
-</section>
-
-<section id="receitas">
-
-<h2>📖 Receitas</h2>
-
-<div class="receita">
-
-<h3>Flor de Crochê</h3>
-
-<p>
-
-1️⃣ Faça 6 correntinhas<br>
-2️⃣ Feche com ponto baixíssimo<br>
-3️⃣ Faça pétalas com pontos altos
-
-</p>
-
-</div>
-
-<div class="receita">
-
-<h3>Tapete Redondo</h3>
-
-<p>
-
-1️⃣ Comece com anel mágico<br>
-2️⃣ Faça 12 pontos altos<br>
-3️⃣ Continue aumentando
-
-</p>
 
 </div>
 

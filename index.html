@@ -9,23 +9,31 @@
 
 <style>
 
+/* RESET */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Segoe UI, Arial;
+
+/* cursor agulha */
+
 cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='24' font-size='24'%3E🪡%3C/text%3E%3C/svg%3E"),auto;
+
 }
 
-/* FUNDO NATURAL */
+/* FUNDO COM NOVELOS */
 
 body{
 
-background:#f6f2ee;
+background:#fff5fb;
 
 background-image:
-radial-gradient(circle at 20% 20%, rgba(255,255,255,0.7) 0%, transparent 40%),
-radial-gradient(circle at 80% 60%, rgba(255,255,255,0.6) 0%, transparent 40%);
+
+url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ctext y='90' font-size='90'%3E🧶%3C/text%3E%3C/svg%3E");
+
+background-size:120px;
 
 color:#444;
 
@@ -37,7 +45,7 @@ color:#444;
 
 text-align:center;
 padding:100px 20px;
-background:linear-gradient(135deg,#e8b6a3,#f3d2c1);
+background:linear-gradient(135deg,#ff9ac6,#ffc8dd);
 color:white;
 
 }
@@ -51,6 +59,7 @@ font-size:48px;
 .hero p{
 
 margin-top:10px;
+opacity:0.9;
 
 }
 
@@ -61,7 +70,7 @@ nav{
 background:white;
 padding:15px;
 text-align:center;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+box-shadow:0 5px 12px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
 
@@ -71,7 +80,7 @@ nav a{
 
 margin:0 15px;
 text-decoration:none;
-color:#c46a4c;
+color:#ff4fa3;
 font-weight:bold;
 
 }
@@ -93,6 +102,16 @@ margin-bottom:40px;
 
 }
 
+/* DECORAÇÃO */
+
+.decoracao{
+
+text-align:center;
+font-size:40px;
+margin-bottom:20px;
+
+}
+
 /* PRODUTOS */
 
 .grid{
@@ -109,13 +128,13 @@ background:white;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
-transition:0.3s;
+transition:0.4s;
 
 }
 
 .card:hover{
 
-transform:translateY(-8px);
+transform:translateY(-10px);
 
 }
 
@@ -127,6 +146,8 @@ object-fit:cover;
 transition:0.4s;
 
 }
+
+/* ZOOM */
 
 .card:hover img{
 
@@ -152,14 +173,14 @@ font-weight:bold;
 display:inline-block;
 margin:15px;
 padding:10px 20px;
-background:#c46a4c;
+background:#ff4fa3;
 color:white;
 border-radius:25px;
 text-decoration:none;
 
 }
 
-/* GALERIA */
+/* GALERIA PINTEREST */
 
 .galeria{
 
@@ -174,7 +195,7 @@ width:100%;
 margin-bottom:20px;
 border-radius:15px;
 box-shadow:0 10px 20px rgba(0,0,0,0.2);
-transition:0.3s;
+transition:0.4s;
 
 }
 
@@ -209,7 +230,7 @@ footer{
 
 margin-top:50px;
 padding:30px;
-background:#e8b6a3;
+background:#ff9ac6;
 text-align:center;
 color:white;
 
@@ -238,7 +259,9 @@ color:white;
 
 <section id="produtos">
 
-<h2>Produtos</h2>
+<h2>🌸 Produtos</h2>
+
+<div class="decoracao">🪡 🧵 🪡</div>
 
 <div class="grid" id="produtosGrid"></div>
 
@@ -246,7 +269,9 @@ color:white;
 
 <section id="galeria">
 
-<h2>Galeria</h2>
+<h2>✨ Galeria</h2>
+
+<div class="decoracao">🧶 🪡 🧶</div>
 
 <div class="galeria">
 
@@ -261,7 +286,7 @@ color:white;
 
 <section id="contato" class="contato">
 
-<h2>Contato</h2>
+<h2>💬 Contato</h2>
 
 <p>Quer encomendar uma peça?</p>
 
@@ -286,7 +311,7 @@ Enviar Email
 
 <footer>
 
-Ateliê de Crochê da Ana • Feito à mão com carinho
+🧶 Ateliê de Crochê da Ana • Feito com carinho
 
 </footer>
 

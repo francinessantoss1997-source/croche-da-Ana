@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
@@ -13,41 +14,39 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family: "Segoe UI", Arial;
 }
 
 body{
 background:#fff7fb;
 color:#444;
-line-height:1.6;
 }
 
-/* HERO */
+/* HEADER */
 
 .hero{
 background:linear-gradient(135deg,#ff9ac6,#ffc8dd);
-color:white;
+padding:80px 20px;
 text-align:center;
-padding:90px 20px;
+color:white;
 }
 
 .hero h1{
-font-size:45px;
-margin-bottom:10px;
+font-size:42px;
 }
 
 .hero p{
 opacity:0.9;
-font-size:18px;
+margin-top:10px;
 }
 
-/* NAV */
+/* MENU */
 
 nav{
 background:white;
 box-shadow:0 4px 12px rgba(0,0,0,0.1);
-padding:15px;
 text-align:center;
+padding:15px;
 position:sticky;
 top:0;
 }
@@ -57,21 +56,19 @@ margin:0 15px;
 text-decoration:none;
 color:#ff4fa3;
 font-weight:bold;
-font-size:17px;
 }
 
 /* SECTIONS */
 
 section{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
 padding:70px 20px;
 }
 
 h2{
-text-align:center;
-margin-bottom:50px;
-font-size:30px;
+margin-bottom:40px;
+font-size:28px;
 }
 
 /* GRID */
@@ -93,7 +90,7 @@ transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px) scale(1.03);
 box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
@@ -112,6 +109,8 @@ padding:0 15px;
 font-weight:bold;
 }
 
+/* BOTÃO */
+
 .btn{
 display:inline-block;
 margin:15px;
@@ -121,6 +120,11 @@ color:white;
 border-radius:25px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#ff2e91;
 }
 
 /* RECEITAS */
@@ -155,7 +159,7 @@ background:#ff9ac6;
 color:white;
 text-align:center;
 padding:30px;
-margin-top:60px;
+margin-top:50px;
 }
 
 /* ANIMAÇÃO */
@@ -187,8 +191,7 @@ transform:translateY(0);
 <div class="hero">
 
 <h1>🧶 Ateliê de Crochê</h1>
-
-<p>Peças feitas à mão com amor e criatividade</p>
+<p>Peças feitas à mão com amor</p>
 
 </div>
 
@@ -202,7 +205,7 @@ transform:translateY(0);
 
 <section id="produtos">
 
-<h2>🌸 Peças em Crochê</h2>
+<h2>🌸 Peças de Crochê</h2>
 
 <div class="grid" id="produtosGrid"></div>
 
@@ -210,7 +213,7 @@ transform:translateY(0);
 
 <section id="receitas">
 
-<h2>📖 Receitas de Crochê</h2>
+<h2>📖 Receitas</h2>
 
 <div class="receita">
 
@@ -219,7 +222,7 @@ transform:translateY(0);
 <p>
 1️⃣ Faça 6 correntinhas<br>
 2️⃣ Feche com ponto baixíssimo<br>
-3️⃣ Faça 3 correntinhas e pontos altos para formar as pétalas
+3️⃣ Faça pétalas com pontos altos
 </p>
 
 </div>
@@ -231,7 +234,7 @@ transform:translateY(0);
 <p>
 1️⃣ Comece com anel mágico<br>
 2️⃣ Faça 12 pontos altos<br>
-3️⃣ Continue aumentando em cada carreira
+3️⃣ Continue aumentando
 </p>
 
 </div>
@@ -242,7 +245,7 @@ transform:translateY(0);
 
 <h2>💬 Contato</h2>
 
-<p>Quer encomendar uma peça personalizada?</p>
+<p>Quer encomendar uma peça?</p>
 
 <br>
 
@@ -276,13 +279,13 @@ const produtos=[
 {
 nome:"Bolsa de Crochê",
 preco:"R$80",
-imagem:"https://images.unsplash.com/photo-1582562124811-c09040d0a901"
+imagem:"https://images.unsplash.com/photo-1616627981459-0e4c9c6c6f63"
 },
 
 {
 nome:"Amigurumi",
 preco:"R$60",
-imagem:"https://images.unsplash.com/photo-1590086782957-93c06ef21604"
+imagem:"https://images.unsplash.com/photo-1605651202774-7d573fd3f12d"
 },
 
 {
@@ -294,13 +297,7 @@ imagem:"https://images.unsplash.com/photo-1610701596007-11502861dcfa"
 {
 nome:"Tapete de Crochê",
 preco:"R$120",
-imagem:"https://images.unsplash.com/photo-1616627981459-0e4c9c6c6f63"
-},
-
-{
-nome:"Cesto de Crochê",
-preco:"R$55",
-imagem:"https://images.unsplash.com/photo-1610701596007-11502861dcfa"
+imagem:"https://images.unsplash.com/photo-1589987607627-52c82b6fdd47"
 }
 
 ]
@@ -320,7 +317,7 @@ grid.innerHTML+=`
 <p class="preco">${p.preco}</p>
 
 <a class="btn"
-href="https://wa.me/5511999999999?text=Quero comprar ${p.nome}">
+href="https://wa.me/5511999999999?text=Olá! Quero comprar ${p.nome}">
 Comprar
 </a>
 

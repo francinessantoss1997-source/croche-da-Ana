@@ -1,74 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ateliê de Crochê</title>
+<title>Ateliê de Crochê da Ana</title>
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: "Segoe UI", Arial;
+font-family:"Segoe UI",sans-serif;
 }
 
+/* FUNDO */
+
 body{
-background:#fff7fb;
+background:
+radial-gradient(circle at 10% 20%, #ffe6f2 0%, transparent 40%),
+radial-gradient(circle at 90% 80%, #ffd6ec 0%, transparent 40%),
+#fff7fb;
+
 color:#444;
 }
 
-/* HEADER */
+/* HERO */
 
 .hero{
-background:linear-gradient(135deg,#ff9ac6,#ffc8dd);
-padding:80px 20px;
 text-align:center;
+padding:80px 20px;
+background:linear-gradient(135deg,#ff9ac6,#ffc8dd);
 color:white;
 }
 
 .hero h1{
-font-size:42px;
+font-size:44px;
 }
 
 .hero p{
-opacity:0.9;
 margin-top:10px;
+opacity:0.9;
 }
 
-/* MENU */
+/* NAV */
 
 nav{
 background:white;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
 text-align:center;
 padding:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
 }
 
 nav a{
-margin:0 15px;
+margin:0 20px;
 text-decoration:none;
-color:#ff4fa3;
 font-weight:bold;
+color:#ff4fa3;
 }
 
 /* SECTIONS */
 
 section{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 padding:70px 20px;
 }
 
 h2{
+text-align:center;
 margin-bottom:40px;
-font-size:28px;
 }
 
 /* GRID */
@@ -85,12 +92,12 @@ gap:30px;
 background:white;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 12px 25px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.03);
+transform:translateY(-8px);
 box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
@@ -119,22 +126,32 @@ background:#ff4fa3;
 color:white;
 border-radius:25px;
 text-decoration:none;
-font-weight:bold;
-transition:0.3s;
 }
 
-.btn:hover{
-background:#ff2e91;
+/* CARROSSEL DE FIOS */
+
+.carrossel{
+display:flex;
+overflow:auto;
+gap:20px;
+padding:20px;
+}
+
+.fio{
+min-width:150px;
+height:150px;
+border-radius:50%;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* RECEITAS */
 
 .receita{
 background:white;
-padding:25px;
+padding:20px;
 border-radius:15px;
 margin-bottom:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
 }
 
 /* CONTATO */
@@ -146,7 +163,7 @@ text-align:center;
 .whatsapp{
 background:#25d366;
 color:white;
-padding:14px 28px;
+padding:15px 30px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
@@ -155,11 +172,11 @@ font-weight:bold;
 /* FOOTER */
 
 footer{
-background:#ff9ac6;
-color:white;
-text-align:center;
-padding:30px;
 margin-top:50px;
+padding:30px;
+background:#ff9ac6;
+text-align:center;
+color:white;
 }
 
 /* ANIMAÇÃO */
@@ -169,17 +186,8 @@ animation:fadeIn 0.8s ease;
 }
 
 @keyframes fadeIn{
-
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 </style>
@@ -190,14 +198,16 @@ transform:translateY(0);
 
 <div class="hero">
 
-<h1>🧶 Ateliê de Crochê</h1>
-<p>Peças feitas à mão com amor</p>
+<h1>🧶 Ateliê de Crochê da Ana</h1>
+
+<p>Peças artesanais feitas com amor e criatividade</p>
 
 </div>
 
 <nav>
 
 <a href="#produtos">Peças</a>
+<a href="#fios">Fios</a>
 <a href="#receitas">Receitas</a>
 <a href="#contato">Contato</a>
 
@@ -205,9 +215,24 @@ transform:translateY(0);
 
 <section id="produtos">
 
-<h2>🌸 Peças de Crochê</h2>
+<h2>🌸 Peças em Crochê</h2>
 
 <div class="grid" id="produtosGrid"></div>
+
+</section>
+
+<section id="fios">
+
+<h2>🧶 Amostras de Fios</h2>
+
+<div class="carrossel">
+
+<img class="fio" src="https://images.unsplash.com/photo-1589987607627-52c82b6fdd47">
+<img class="fio" src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d">
+<img class="fio" src="https://images.unsplash.com/photo-1616627981459-0e4c9c6c6f63">
+<img class="fio" src="https://images.unsplash.com/photo-1610701596007-11502861dcfa">
+
+</div>
 
 </section>
 
@@ -232,8 +257,8 @@ transform:translateY(0);
 <h3>Tapete Redondo</h3>
 
 <p>
-1️⃣ Comece com anel mágico<br>
-2️⃣ Faça 12 pontos altos<br>
+1️⃣ Anel mágico<br>
+2️⃣ 12 pontos altos<br>
 3️⃣ Continue aumentando
 </p>
 
@@ -250,7 +275,7 @@ transform:translateY(0);
 <br>
 
 <a class="whatsapp"
-href="https://wa.me/5511999999999">
+href="https://wa.me/5511999999999?text=Olá! Quero uma peça de crochê">
 
 Falar no WhatsApp
 
@@ -268,7 +293,7 @@ Enviar Email
 
 <footer>
 
-🧶 Ateliê de Crochê • Feito com amor
+🧶 Ateliê de Crochê da Ana • Feito à mão com carinho
 
 </footer>
 

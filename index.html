@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Ateliê de Crochê</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+background:#fff6fb;
+color:#444;
+
+}
+
+header{
+
+background:linear-gradient(90deg,#ff9ac6,#ffc8dd);
+padding:60px;
+text-align:center;
+color:white;
+
+}
+
+header h1{
+
+font-size:40px;
+
+}
+
+nav{
+
+background:white;
+padding:15px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+nav a{
+
+margin:15px;
+text-decoration:none;
+color:#ff4fa3;
+font-weight:bold;
+font-size:18px;
+
+}
+
+section{
+
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+
+}
+
+h2{
+
+margin-bottom:40px;
+font-size:28px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+
+}
+
+.card img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+
+}
+
+.card h3{
+
+padding:10px;
+
+}
+
+.preco{
+
+padding:0 10px;
+font-weight:bold;
+
+}
+
+.btn{
+
+display:inline-block;
+margin:10px;
+padding:10px 18px;
+background:#ff4fa3;
+color:white;
+border-radius:20px;
+text-decoration:none;
+}
+
+.receita{
+
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.contato{
+
+text-align:center;
+
+}
+
+.whatsapp{
+
+display:inline-block;
+background:#25d366;
+color:white;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+footer{
+
+background:#ff9ac6;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🧶 Ateliê de Crochê</h1>
+
+<p>Peças feitas à mão com amor</p>
+
+</header>
+
+<nav>
+
+<a href="#produtos">Peças</a>
+<a href="#receitas">Receitas</a>
+<a href="#contato">Contato</a>
+
+</nav>
+
+<section id="produtos">
+
+<h2>🌸 Peças de Crochê</h2>
+
+<div class="grid" id="listaProdutos"></div>
+
+</section>
+
+<section id="receitas">
+
+<h2>📖 Receitas</h2>
+
+<div class="receita">
+
+<h3>Flor simples</h3>
+
+<p>
+
+1️⃣ Faça 6 correntinhas  
+2️⃣ Feche com ponto baixíssimo  
+3️⃣ Faça pétalas com pontos altos  
+
+</p>
+
+</div>
+
+<div class="receita">
+
+<h3>Tapete redondo</h3>
+
+<p>
+
+1️⃣ Comece com anel mágico  
+2️⃣ Faça 12 pontos altos  
+3️⃣ Aumente nas próximas carreiras  
+
+</p>
+
+</div>
+
+</section>
+
+<section id="contato" class="contato">
+
+<h2>💬 Contato</h2>
+
+<p>Quer encomendar uma peça?</p>
+
+<br>
+
+<a class="whatsapp"
+href="https://wa.me/5511999999999">
+
+Falar no WhatsApp
+
+</a>
+
+<br><br>
+
+<a href="mailto:seuemail@gmail.com">
+
+Enviar Email
+
+</a>
+
+</section>
+
+<footer>
+
+🧶 Ateliê de Crochê • Feito com amor
+
+</footer>
+
+<script>
+
+const produtos = [
+
+{
+nome:"Bolsa de Crochê",
+preco:"R$80",
+imagem:"https://images.unsplash.com/photo-1582562124811-c09040d0a901"
+},
+
+{
+nome:"Amigurumi",
+preco:"R$60",
+imagem:"https://images.unsplash.com/photo-1590086782957-93c06ef21604"
+},
+
+{
+nome:"Sousplat",
+preco:"R$40",
+imagem:"https://images.unsplash.com/photo-1610701596007-11502861dcfa"
+},
+
+{
+nome:"Tapete de Crochê",
+preco:"R$120",
+imagem:"https://images.unsplash.com/photo-1616627981459-0e4c9c6c6f63"
+}
+
+]
+
+const lista = document.getElementById("listaProdutos")
+
+produtos.forEach(p => {
+
+lista.innerHTML += `
+
+<div class="card">
+
+<img src="${p.imagem}">
+
+<h3>${p.nome}</h3>
+
+<p class="preco">${p.preco}</p>
+
+<a class="btn"
+href="https://wa.me/5511999999999?text=Quero comprar ${p.nome}">
+Comprar
+</a>
+
+</div>
+
+`
+
+})
+
+</script>
+
+</body>
+</html>
